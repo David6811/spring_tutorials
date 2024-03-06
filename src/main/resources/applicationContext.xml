@@ -8,4 +8,11 @@
     <bean id="myBean" class="org.example.MyBean" init-method="afterPropertiesSet" destroy-method="destroy">
         <property name="message" value="Hello, Spring!" />
     </bean>
+
+    <!-- MyService definition -->
+    <bean id="myService" class="org.example.MyService">
+        <constructor-arg ref="myBean"/>
+    </bean>
+
+
 </beans>
